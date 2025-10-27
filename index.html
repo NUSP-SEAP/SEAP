@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checklist Diário</title>
+    <title>Checklist Diário (Teste n8n)</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -26,13 +26,6 @@
         h1 {
             text-align: center;
             color: #222;
-        }
-
-        #userInfo {
-            text-align: right;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-            color: #555;
         }
 
         .form-group {
@@ -115,61 +108,59 @@
 <body>
 
     <div class="container">
-        <h1>Checklist Diário</h1> [cite: 1]
-        <div id="userInfo">Carregando usuário...</div>
+        <h1>Checklist Diário</h1>
 
         <form id="checklistForm">
-            <input type="hidden" id="userEmail" name="userEmail">
 
             <div class="form-group">
-                <label for="dataOperacao">Data da Operação:</label> [cite: 3]
+                <label for="dataOperacao">Data da Operação:</label>
                 <input type="date" id="dataOperacao" name="dataOperacao" required>
             </div>
 
             <div class="form-group">
-                <label for="local">Plenário/Sala:</label> [cite: 4]
+                <label for="local">Plenário/Sala:</label>
                 <select id="local" name="local" required>
                     <option value="">Selecione um local...</option>
-                    <option value="Auditório">Auditório</option> [cite: 5]
-                    <option value="Plenário">Plenário</option> [cite: 7]
-                    <option value="Sala 02">Sala 02</option> [cite: 9]
-                    <option value="Sala 03">Sala 03</option> [cite: 11]
-                    <option value="Sala 06">Sala 06</option> [cite: 12]
-                    <option value="Sala 07">Sala 07</option> [cite: 13]
-                    <option value="Sala 09">Sala 09</option> [cite: 15]
-                    <option value="Sala 13">Sala 13</option> [cite: 17]
-                    <option value="Sala 15">Sala 15</option> [cite: 18]
-                    <option value="Sala 19">Sala 19</option> [cite: 20]
+                    <option value="Auditório">Auditório</option>
+                    <option value="Plenário">Plenário</option>
+                    <option value="Sala 02">Sala 02</option>
+                    <option value="Sala 03">Sala 03</option>
+                    <option value="Sala 06">Sala 06</option>
+                    <option value="Sala 07">Sala 07</option>
+                    <option value="Sala 09">Sala 09</option>
+                    <option value="Sala 13">Sala 13</option>
+                    <option value="Sala 15">Sala 15</option>
+                    <option value="Sala 19">Sala 19</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="turno">Turno:</label> [cite: 21]
+                <label for="turno">Turno:</label>
                 <select id="turno" name="turno" required>
                     <option value="">Selecione um turno...</option>
-                    <option value="Matutino">Matutino</option> [cite: 22]
-                    <option value="Vespertino">Vespertino</option> [cite: 23]
+                    <option value="Matutino">Matutino</option>
+                    <option value="Vespertino">Vespertino</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="horaInicio">Horário de início dos testes:</label> [cite: 24]
+                <label for="horaInicio">Horário de início dos testes:</label>
                 <input type="time" id="horaInicio" name="horaInicio" required>
             </div>
 
             <div class="form-group">
-                <p>Status dos Equipamentos (Marque "Ok" ou "Falha"):</p> [cite: 26]
+                <p>Status dos Equipamentos (Marque "Ok" ou "Falha"):</p>
 
                 <div class="check-item">
-                    <span class="check-item-label">Sistema Zoom</span> [cite: 30]
+                    <span class="check-item-label">Sistema Zoom</span>
                     <label><input type="radio" name="sistemaZoom" value="Ok" required> Ok</label>
                     <label><input type="radio" name="sistemaZoom" value="Falha"> Falha</label>
                     <textarea id="falhaSistemaZoom" name="falhaSistemaZoom" class="falha-descricao"
-                        placeholder="Descreva a falha..."></textarea> [cite: 27]
+                        placeholder="Descreva a falha..."></textarea>
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">PC do Secretário</span> [cite: 31]
+                    <span class="check-item-label">PC do Secretário</span>
                     <label><input type="radio" name="pcSecretario" value="Ok" required> Ok</label>
                     <label><input type="radio" name="pcSecretario" value="Falha"> Falha</label>
                     <textarea id="falhaPcSecretario" name="falhaPcSecretario" class="falha-descricao"
@@ -177,7 +168,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Vídeowall</span> [cite: 32]
+                    <span class="check-item-label">Vídeowall</span>
                     <label><input type="radio" name="videowall" value="Ok" required> Ok</label>
                     <label><input type="radio" name="videowall" value="Falha"> Falha</label>
                     <textarea id="falhaVideowall" name="falhaVideowall" class="falha-descricao"
@@ -185,7 +176,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Mic sem fio</span> [cite: 34]
+                    <span class="check-item-label">Mic sem fio</span>
                     <label><input type="radio" name="micSemFio" value="Ok" required> Ok</label>
                     <label><input type="radio" name="micSemFio" value="Falha"> Falha</label>
                     <textarea id="falhaMicSemFio" name="falhaMicSemFio" class="falha-descricao"
@@ -193,7 +184,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Mic de bancada</span> [cite: 35]
+                    <span class="check-item-label">Mic de bancada</span>
                     <label><input type="radio" name="micBancada" value="Ok" required> Ok</label>
                     <label><input type="radio" name="micBancada" value="Falha"> Falha</label>
                     <textarea id="falhaMicBancada" name="falhaMicBancada" class="falha-descricao"
@@ -201,7 +192,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Sinal TV Senado</span> [cite: 36]
+                    <span class="check-item-label">Sinal TV Senado</span>
                     <label><input type="radio" name="sinalTVSenado" value="Ok" required> Ok</label>
                     <label><input type="radio" name="sinalTVSenado" value="Falha"> Falha</label>
                     <textarea id="falhaSinalTVSenado" name="falhaSinalTVSenado" class="falha-descricao"
@@ -209,7 +200,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Tablet Presidente</span> [cite: 37]
+                    <span class="check-item-label">Tablet Presidente</span>
                     <label><input type="radio" name="tabletPresidente" value="Ok" required> Ok</label>
                     <label><input type="radio" name="tabletPresidente" value="Falha"> Falha</label>
                     <textarea id="falhaTabletPresidente" name="falhaTabletPresidente" class="falha-descricao"
@@ -217,7 +208,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Tablet Secretária</span> [cite: 40]
+                    <span class="check-item-label">Tablet Secretária</span>
                     <label><input type="radio" name="tabletSecretaria" value="Ok" required> Ok</label>
                     <label><input type="radio" name="tabletSecretaria" value="Falha"> Falha</label>
                     <textarea id="falhaTabletSecretaria" name="falhaTabletSecretaria" class="falha-descricao"
@@ -225,7 +216,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">Relógio (sincronismo)</span> [cite: 41]
+                    <span class="check-item-label">Relógio (sincronismo)</span>
                     <label><input type="radio" name="relogio" value="Ok" required> Ok</label>
                     <label><input type="radio" name="relogio" value="Falha"> Falha</label>
                     <textarea id="falhaRelogio" name="falhaRelogio" class="falha-descricao"
@@ -233,7 +224,7 @@
                 </div>
 
                 <div class="check-item">
-                    <span class="check-item-label">VIP</span> [cite: 39]
+                    <span class="check-item-label">VIP</span>
                     <label><input type="radio" name="vip" value="Ok" required> Ok</label>
                     <label><input type="radio" name="vip" value="Falha"> Falha</label>
                     <textarea id="falhaVip" name="falhaVip" class="falha-descricao"
@@ -243,7 +234,7 @@
             </div>
 
             <div class="form-group">
-                <label for="horaTermino">Horário de término dos testes:</label> [cite: 42]
+                <label for="horaTermino">Horário de término dos testes:</label>
                 <input type="time" id="horaTermino" name="horaTermino" required>
             </div>
 
@@ -263,42 +254,14 @@
         // ##################################################################
         // CONFIGURE AQUI A URL DO SEU WEBHOOK DO N8N (Self-Hosted no ACA)
         // ##################################################################
-        const N8N_WEBHOOK_URL = "https://n8n-app-final.kindtree-6808ca28.brazilsouth.azurecontainerapps.io/";
+        const N8N_WEBHOOK_URL = "COLE_A_URL_DO_SEU_WEBHOOK_N8N_AQUI";
         // ##################################################################
 
 
         document.addEventListener('DOMContentLoaded', () => {
-            fetchUser();
             setupConditionalLogic();
             setupFormSubmission();
         });
-
-        /**
-         * Busca informações do usuário autenticado pelo Azure Static Web Apps
-         */
-        async function fetchUser() {
-            const userInfoDiv = document.getElementById('userInfo');
-            const userEmailInput = document.getElementById('userEmail');
-            try {
-                const response = await fetch('/.auth/me');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const data = await response.json();
-
-                if (data.clientPrincipal) {
-                    const email = data.clientPrincipal.userDetails;
-                    userInfoDiv.textContent = `Logado como: ${email}`;
-                    userEmailInput.value = email;
-                } else {
-                    userInfoDiv.textContent = 'Usuário não autenticado. Faça login para continuar.';
-                    // Em um SWA com autenticação forçada, isso redirecionaria para o login
-                }
-            } catch (error) {
-                console.error('Erro ao buscar usuário:', error);
-                userInfoDiv.textContent = 'Erro ao verificar autenticação.';
-            }
-        }
 
         /**
          * Configura a lógica condicional para os campos de falha
@@ -314,9 +277,9 @@
 
                     if (falhaTextarea) {
                         if (e.target.value === 'Falha' && e.target.checked) {
-                            falhaTextarea.style.display = 'block'; // [cite: 27]
+                            falhaTextarea.style.display = 'block'; //
                         } else {
-                            falhaTextarea.style.display = 'none'; // [cite: 29]
+                            falhaTextarea.style.display = 'none'; //
                             falhaTextarea.value = ''; // Limpa o campo ao ocultar
                         }
                     }
@@ -336,13 +299,6 @@
 
                 if (N8N_WEBHOOK_URL === "COLE_A_URL_DO_SEU_WEBHOOK_N8N_AQUI") {
                     statusMessage.textContent = 'Erro: A URL do Webhook do n8n não foi configurada no JavaScript.';
-                    statusMessage.style.color = 'red';
-                    return;
-                }
-
-                // Verifica se o email foi carregado
-                if (!document.getElementById('userEmail').value) {
-                    statusMessage.textContent = 'Erro: Não foi possível obter o e-mail do usuário. Verifique se está logado.';
                     statusMessage.style.color = 'red';
                     return;
                 }
@@ -371,8 +327,6 @@
                         document.querySelectorAll('.falha-descricao').forEach(area => {
                             area.style.display = 'none';
                         });
-                        // Recarrega o usuário (pois o campo oculto foi limpo)
-                        fetchUser();
                     } else {
                         // Tenta ler a resposta de erro do n8n
                         const errorData = await response.json();
